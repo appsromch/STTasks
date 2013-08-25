@@ -17,8 +17,12 @@
 		AFBB57AF17CA5048004D01B1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57AE17CA5048004D01B1 /* Default@2x.png */; };
 		AFBB57B117CA5048004D01B1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57B017CA5048004D01B1 /* Default-568h@2x.png */; };
 		AFBB57B417CA5048004D01B1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57B217CA5048004D01B1 /* MainStoryboard.storyboard */; };
-		AFBB57B717CA5048004D01B1 /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57B617CA5048004D01B1 /* STMainViewController.m */; };
-		AFBB57BA17CA5048004D01B1 /* STTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57B917CA5048004D01B1 /* STTaskViewController.m */; };
+		AFBB57C517CA51AE004D01B1 /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57C217CA51AE004D01B1 /* STMainViewController.m */; };
+		AFBB57C617CA51AE004D01B1 /* STTaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57C417CA51AE004D01B1 /* STTaskDetailViewController.m */; };
+		AFBB57CF17CA546D004D01B1 /* pic_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57CC17CA546D004D01B1 /* pic_3.png */; };
+		AFBB57D017CA546D004D01B1 /* pic_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57CD17CA546D004D01B1 /* pic_1.png */; };
+		AFBB57D117CA546D004D01B1 /* pic_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57CE17CA546D004D01B1 /* pic_2.png */; };
+		AFBB57D317CA57E4004D01B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBB57D217CA57E4004D01B1 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +40,14 @@
 		AFBB57AE17CA5048004D01B1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AFBB57B017CA5048004D01B1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFBB57B317CA5048004D01B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		AFBB57B517CA5048004D01B1 /* STMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMainViewController.h; sourceTree = "<group>"; };
-		AFBB57B617CA5048004D01B1 /* STMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
-		AFBB57B817CA5048004D01B1 /* STTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTaskViewController.h; sourceTree = "<group>"; };
-		AFBB57B917CA5048004D01B1 /* STTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTaskViewController.m; sourceTree = "<group>"; };
+		AFBB57C117CA51AE004D01B1 /* STMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMainViewController.h; sourceTree = "<group>"; };
+		AFBB57C217CA51AE004D01B1 /* STMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
+		AFBB57C317CA51AE004D01B1 /* STTaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTaskDetailViewController.h; sourceTree = "<group>"; };
+		AFBB57C417CA51AE004D01B1 /* STTaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTaskDetailViewController.m; sourceTree = "<group>"; };
+		AFBB57CC17CA546D004D01B1 /* pic_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_3.png; sourceTree = "<group>"; };
+		AFBB57CD17CA546D004D01B1 /* pic_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_1.png; sourceTree = "<group>"; };
+		AFBB57CE17CA546D004D01B1 /* pic_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_2.png; sourceTree = "<group>"; };
+		AFBB57D217CA57E4004D01B1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFBB57D317CA57E4004D01B1 /* QuartzCore.framework in Frameworks */,
 				AFBB579B17CA5048004D01B1 /* UIKit.framework in Frameworks */,
 				AFBB579D17CA5048004D01B1 /* Foundation.framework in Frameworks */,
 				AFBB579F17CA5048004D01B1 /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +85,7 @@
 		AFBB579917CA5048004D01B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFBB57D217CA57E4004D01B1 /* QuartzCore.framework */,
 				AFBB579A17CA5048004D01B1 /* UIKit.framework */,
 				AFBB579C17CA5048004D01B1 /* Foundation.framework */,
 				AFBB579E17CA5048004D01B1 /* CoreGraphics.framework */,
@@ -89,10 +99,9 @@
 				AFBB57A917CA5048004D01B1 /* STAppDelegate.h */,
 				AFBB57AA17CA5048004D01B1 /* STAppDelegate.m */,
 				AFBB57B217CA5048004D01B1 /* MainStoryboard.storyboard */,
-				AFBB57B517CA5048004D01B1 /* STMainViewController.h */,
-				AFBB57B617CA5048004D01B1 /* STMainViewController.m */,
-				AFBB57B817CA5048004D01B1 /* STTaskViewController.h */,
-				AFBB57B917CA5048004D01B1 /* STTaskViewController.m */,
+				AFBB57C017CA51AE004D01B1 /* View Controllers */,
+				AFBB57C717CA52D2004D01B1 /* Views */,
+				AFBB57CB17CA546D004D01B1 /* Graphic */,
 				AFBB57A117CA5048004D01B1 /* Supporting Files */,
 			);
 			path = STTasks;
@@ -110,6 +119,34 @@
 				AFBB57B017CA5048004D01B1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFBB57C017CA51AE004D01B1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB57C117CA51AE004D01B1 /* STMainViewController.h */,
+				AFBB57C217CA51AE004D01B1 /* STMainViewController.m */,
+				AFBB57C317CA51AE004D01B1 /* STTaskDetailViewController.h */,
+				AFBB57C417CA51AE004D01B1 /* STTaskDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AFBB57C717CA52D2004D01B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFBB57CB17CA546D004D01B1 /* Graphic */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB57CC17CA546D004D01B1 /* pic_3.png */,
+				AFBB57CD17CA546D004D01B1 /* pic_1.png */,
+				AFBB57CE17CA546D004D01B1 /* pic_2.png */,
+			);
+			path = Graphic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +206,9 @@
 				AFBB57AF17CA5048004D01B1 /* Default@2x.png in Resources */,
 				AFBB57B117CA5048004D01B1 /* Default-568h@2x.png in Resources */,
 				AFBB57B417CA5048004D01B1 /* MainStoryboard.storyboard in Resources */,
+				AFBB57CF17CA546D004D01B1 /* pic_3.png in Resources */,
+				AFBB57D017CA546D004D01B1 /* pic_1.png in Resources */,
+				AFBB57D117CA546D004D01B1 /* pic_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,8 +221,8 @@
 			files = (
 				AFBB57A717CA5048004D01B1 /* main.m in Sources */,
 				AFBB57AB17CA5048004D01B1 /* STAppDelegate.m in Sources */,
-				AFBB57B717CA5048004D01B1 /* STMainViewController.m in Sources */,
-				AFBB57BA17CA5048004D01B1 /* STTaskViewController.m in Sources */,
+				AFBB57C517CA51AE004D01B1 /* STMainViewController.m in Sources */,
+				AFBB57C617CA51AE004D01B1 /* STTaskDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
