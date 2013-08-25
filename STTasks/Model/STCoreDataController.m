@@ -13,7 +13,7 @@
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (NSURL *)applicationDocumentsDirectory;
+
 - (void)saveContext;
 @end
 
@@ -65,6 +65,12 @@
 
 //  Removing Task
 - (void)removeTask:(STTask *)task{
+    NSError *error=nil;
+
+    if (task.image&&![task.image isEqualToString:@""]) {
+        [[NSFileManager defaultManager] removeItemAtPath:[self imagePath:task.image] error:&error];
+    }
+    
     NSManagedObjectContext *context=[self managedObjectContext];
     [context deleteObject:task];
     [self saveContext];
@@ -80,6 +86,10 @@
     task.image=image;
     task.date=[NSDate date];
     [self saveContext];
+}
+//  Path for Image
+- (NSString *)imagePath:(NSString *)image{
+    return [[[self applicationDocumentsDirectory] path] stringByAppendingPathComponent:image];
 }
 #pragma mark - Core Data stack
 
@@ -145,7 +155,10 @@
 
 #pragma mark - Files
 - (void)copyDbIfNeeded{
-    NSString *fileName = @"STTasks.sqlite";
+    [self copyFile:@"STTasks.sqlite"];
+    [self copyFile:@"pic.png"];
+}
+- (void)copyFile:(NSString *)fileName{
     
     NSURL *fileDocumentsUrl = [self applicationDocumentsDirectory];
     NSString *destinationPath = [fileDocumentsUrl path];

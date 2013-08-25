@@ -11,9 +11,10 @@
 @interface STCoreDataController : NSObject
 
 + (id)sharedInstance;
-
+- (NSURL *)applicationDocumentsDirectory;
 - (NSFetchedResultsController *)getFetchResultsTasks;
 - (void)removeTask:(STTask *)task;
 - (void)addTaskWithTitle:(NSString *)title description:(NSString *)description image:(NSString *)image;
+- (NSString *)imagePath:(NSString *)image;
 
 @end

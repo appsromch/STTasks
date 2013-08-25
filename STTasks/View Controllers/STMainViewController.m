@@ -72,7 +72,7 @@
     STTask *task = [_fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = task.title;
     cell.detailTextLabel.text = task.info;
-    [cell.imageView setImage: [UIImage imageNamed:task.image]];
+    cell.imageView.image=[UIImage imageWithContentsOfFile:[[STCoreDataController sharedInstance] imagePath:task.image]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,15 +115,12 @@
     }
 }
 
-
+#pragma mark - FetchResultController delegate
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
     [self.tableView beginUpdates];
 }
 
-
-
-#pragma mark - FetchResultController delegate
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
     
     UITableView *tableView = self.tableView;

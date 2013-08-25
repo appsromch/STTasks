@@ -8,6 +8,7 @@
 
 #import "STTaskDetailViewController.h"
 #import "STTask.h"
+#import "STCoreDataController.h"
 
 @interface STTaskDetailViewController ()
 - (void)configureView;
@@ -31,9 +32,11 @@
 - (void)configureView
 {
     if (_task) {
-        self.labelTitle.text=_task.title;
-        self.labelDescription.text=_task.info;
-        [self.imageViewPicture setImage:[UIImage imageNamed:_task.image]];
+        self.title=self.task.title;
+        self.labelTitle.text=self.task.title;
+        self.labelDescription.text=self.task.info;
+        self.imageViewPicture.image=[UIImage imageWithContentsOfFile:[[STCoreDataController sharedInstance] imagePath:self.task.image]];
+
     }
 }
 

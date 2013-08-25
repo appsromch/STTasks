@@ -19,9 +19,7 @@
 		AFBB57B417CA5048004D01B1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57B217CA5048004D01B1 /* MainStoryboard.storyboard */; };
 		AFBB57C517CA51AE004D01B1 /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57C217CA51AE004D01B1 /* STMainViewController.m */; };
 		AFBB57C617CA51AE004D01B1 /* STTaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57C417CA51AE004D01B1 /* STTaskDetailViewController.m */; };
-		AFBB57CF17CA546D004D01B1 /* pic_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57CC17CA546D004D01B1 /* pic_3.png */; };
-		AFBB57D017CA546D004D01B1 /* pic_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57CD17CA546D004D01B1 /* pic_1.png */; };
-		AFBB57D117CA546D004D01B1 /* pic_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57CE17CA546D004D01B1 /* pic_2.png */; };
+		AFBB57CF17CA546D004D01B1 /* pic.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57CC17CA546D004D01B1 /* pic.png */; };
 		AFBB57D617CA70C2004D01B1 /* STTasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57D417CA70C2004D01B1 /* STTasks.xcdatamodeld */; };
 		AFBB57DA17CA70FB004D01B1 /* STCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57D917CA70FB004D01B1 /* STCoreDataController.m */; };
 		AFBB57DC17CA740D004D01B1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBB57DB17CA740D004D01B1 /* CoreData.framework */; };
@@ -49,9 +47,7 @@
 		AFBB57C217CA51AE004D01B1 /* STMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
 		AFBB57C317CA51AE004D01B1 /* STTaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTaskDetailViewController.h; sourceTree = "<group>"; };
 		AFBB57C417CA51AE004D01B1 /* STTaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTaskDetailViewController.m; sourceTree = "<group>"; };
-		AFBB57CC17CA546D004D01B1 /* pic_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_3.png; sourceTree = "<group>"; };
-		AFBB57CD17CA546D004D01B1 /* pic_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_1.png; sourceTree = "<group>"; };
-		AFBB57CE17CA546D004D01B1 /* pic_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_2.png; sourceTree = "<group>"; };
+		AFBB57CC17CA546D004D01B1 /* pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic.png; sourceTree = "<group>"; };
 		AFBB57D217CA57E4004D01B1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AFBB57D517CA70C2004D01B1 /* STTasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = STTasks.xcdatamodel; sourceTree = "<group>"; };
 		AFBB57D817CA70FB004D01B1 /* STCoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCoreDataController.h; sourceTree = "<group>"; };
@@ -154,9 +150,7 @@
 		AFBB57CB17CA546D004D01B1 /* Graphic */ = {
 			isa = PBXGroup;
 			children = (
-				AFBB57CC17CA546D004D01B1 /* pic_3.png */,
-				AFBB57CD17CA546D004D01B1 /* pic_1.png */,
-				AFBB57CE17CA546D004D01B1 /* pic_2.png */,
+				AFBB57CC17CA546D004D01B1 /* pic.png */,
 			);
 			path = Graphic;
 			sourceTree = "<group>";
@@ -229,9 +223,7 @@
 				AFBB57AF17CA5048004D01B1 /* Default@2x.png in Resources */,
 				AFBB57B117CA5048004D01B1 /* Default-568h@2x.png in Resources */,
 				AFBB57B417CA5048004D01B1 /* MainStoryboard.storyboard in Resources */,
-				AFBB57CF17CA546D004D01B1 /* pic_3.png in Resources */,
-				AFBB57D017CA546D004D01B1 /* pic_1.png in Resources */,
-				AFBB57D117CA546D004D01B1 /* pic_2.png in Resources */,
+				AFBB57CF17CA546D004D01B1 /* pic.png in Resources */,
 				AFBB57E417CA97FB004D01B1 /* STTasks.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
