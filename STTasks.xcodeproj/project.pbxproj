@@ -22,7 +22,12 @@
 		AFBB57CF17CA546D004D01B1 /* pic_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57CC17CA546D004D01B1 /* pic_3.png */; };
 		AFBB57D017CA546D004D01B1 /* pic_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57CD17CA546D004D01B1 /* pic_1.png */; };
 		AFBB57D117CA546D004D01B1 /* pic_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57CE17CA546D004D01B1 /* pic_2.png */; };
-		AFBB57D317CA57E4004D01B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBB57D217CA57E4004D01B1 /* QuartzCore.framework */; };
+		AFBB57D617CA70C2004D01B1 /* STTasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57D417CA70C2004D01B1 /* STTasks.xcdatamodeld */; };
+		AFBB57DA17CA70FB004D01B1 /* STCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57D917CA70FB004D01B1 /* STCoreDataController.m */; };
+		AFBB57DC17CA740D004D01B1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBB57DB17CA740D004D01B1 /* CoreData.framework */; };
+		AFBB57DF17CA77D5004D01B1 /* STTask.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57DE17CA77D5004D01B1 /* STTask.m */; };
+		AFBB57E217CA8992004D01B1 /* STNewTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57E117CA8991004D01B1 /* STNewTaskViewController.m */; };
+		AFBB57E417CA97FB004D01B1 /* STTasks.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57E317CA97FA004D01B1 /* STTasks.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,15 @@
 		AFBB57CD17CA546D004D01B1 /* pic_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_1.png; sourceTree = "<group>"; };
 		AFBB57CE17CA546D004D01B1 /* pic_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_2.png; sourceTree = "<group>"; };
 		AFBB57D217CA57E4004D01B1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AFBB57D517CA70C2004D01B1 /* STTasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = STTasks.xcdatamodel; sourceTree = "<group>"; };
+		AFBB57D817CA70FB004D01B1 /* STCoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCoreDataController.h; sourceTree = "<group>"; };
+		AFBB57D917CA70FB004D01B1 /* STCoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCoreDataController.m; sourceTree = "<group>"; };
+		AFBB57DB17CA740D004D01B1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AFBB57DD17CA77D5004D01B1 /* STTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTask.h; sourceTree = "<group>"; };
+		AFBB57DE17CA77D5004D01B1 /* STTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTask.m; sourceTree = "<group>"; };
+		AFBB57E017CA8991004D01B1 /* STNewTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewTaskViewController.h; sourceTree = "<group>"; };
+		AFBB57E117CA8991004D01B1 /* STNewTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewTaskViewController.m; sourceTree = "<group>"; };
+		AFBB57E317CA97FA004D01B1 /* STTasks.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = STTasks.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBB57D317CA57E4004D01B1 /* QuartzCore.framework in Frameworks */,
+				AFBB57DC17CA740D004D01B1 /* CoreData.framework in Frameworks */,
 				AFBB579B17CA5048004D01B1 /* UIKit.framework in Frameworks */,
 				AFBB579D17CA5048004D01B1 /* Foundation.framework in Frameworks */,
 				AFBB579F17CA5048004D01B1 /* CoreGraphics.framework in Frameworks */,
@@ -85,6 +99,7 @@
 		AFBB579917CA5048004D01B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFBB57DB17CA740D004D01B1 /* CoreData.framework */,
 				AFBB57D217CA57E4004D01B1 /* QuartzCore.framework */,
 				AFBB579A17CA5048004D01B1 /* UIKit.framework */,
 				AFBB579C17CA5048004D01B1 /* Foundation.framework */,
@@ -99,8 +114,9 @@
 				AFBB57A917CA5048004D01B1 /* STAppDelegate.h */,
 				AFBB57AA17CA5048004D01B1 /* STAppDelegate.m */,
 				AFBB57B217CA5048004D01B1 /* MainStoryboard.storyboard */,
+				AFBB57D417CA70C2004D01B1 /* STTasks.xcdatamodeld */,
+				AFBB57D717CA70E0004D01B1 /* Model */,
 				AFBB57C017CA51AE004D01B1 /* View Controllers */,
-				AFBB57C717CA52D2004D01B1 /* Views */,
 				AFBB57CB17CA546D004D01B1 /* Graphic */,
 				AFBB57A117CA5048004D01B1 /* Supporting Files */,
 			);
@@ -114,6 +130,7 @@
 				AFBB57A317CA5048004D01B1 /* InfoPlist.strings */,
 				AFBB57A617CA5048004D01B1 /* main.m */,
 				AFBB57A817CA5048004D01B1 /* STTasks-Prefix.pch */,
+				AFBB57E317CA97FA004D01B1 /* STTasks.sqlite */,
 				AFBB57AC17CA5048004D01B1 /* Default.png */,
 				AFBB57AE17CA5048004D01B1 /* Default@2x.png */,
 				AFBB57B017CA5048004D01B1 /* Default-568h@2x.png */,
@@ -128,15 +145,10 @@
 				AFBB57C217CA51AE004D01B1 /* STMainViewController.m */,
 				AFBB57C317CA51AE004D01B1 /* STTaskDetailViewController.h */,
 				AFBB57C417CA51AE004D01B1 /* STTaskDetailViewController.m */,
+				AFBB57E017CA8991004D01B1 /* STNewTaskViewController.h */,
+				AFBB57E117CA8991004D01B1 /* STNewTaskViewController.m */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		AFBB57C717CA52D2004D01B1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		AFBB57CB17CA546D004D01B1 /* Graphic */ = {
@@ -147,6 +159,17 @@
 				AFBB57CE17CA546D004D01B1 /* pic_2.png */,
 			);
 			path = Graphic;
+			sourceTree = "<group>";
+		};
+		AFBB57D717CA70E0004D01B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB57D817CA70FB004D01B1 /* STCoreDataController.h */,
+				AFBB57D917CA70FB004D01B1 /* STCoreDataController.m */,
+				AFBB57DD17CA77D5004D01B1 /* STTask.h */,
+				AFBB57DE17CA77D5004D01B1 /* STTask.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +232,7 @@
 				AFBB57CF17CA546D004D01B1 /* pic_3.png in Resources */,
 				AFBB57D017CA546D004D01B1 /* pic_1.png in Resources */,
 				AFBB57D117CA546D004D01B1 /* pic_2.png in Resources */,
+				AFBB57E417CA97FB004D01B1 /* STTasks.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +247,10 @@
 				AFBB57AB17CA5048004D01B1 /* STAppDelegate.m in Sources */,
 				AFBB57C517CA51AE004D01B1 /* STMainViewController.m in Sources */,
 				AFBB57C617CA51AE004D01B1 /* STTaskDetailViewController.m in Sources */,
+				AFBB57D617CA70C2004D01B1 /* STTasks.xcdatamodeld in Sources */,
+				AFBB57DA17CA70FB004D01B1 /* STCoreDataController.m in Sources */,
+				AFBB57DF17CA77D5004D01B1 /* STTask.m in Sources */,
+				AFBB57E217CA8992004D01B1 /* STNewTaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +375,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AFBB57D417CA70C2004D01B1 /* STTasks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AFBB57D517CA70C2004D01B1 /* STTasks.xcdatamodel */,
+			);
+			currentVersion = AFBB57D517CA70C2004D01B1 /* STTasks.xcdatamodel */;
+			path = STTasks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AFBB578F17CA5048004D01B1 /* Project object */;
 }

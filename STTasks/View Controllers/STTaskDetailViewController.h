@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class STTask;
 @interface STTaskDetailViewController : UIViewController
 
-@property (strong, nonatomic) NSDictionary *info;
+@property (strong, nonatomic) STTask *task;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewPicture;
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelDescription;

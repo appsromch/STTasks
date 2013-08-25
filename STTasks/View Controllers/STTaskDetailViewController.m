@@ -7,6 +7,7 @@
 //
 
 #import "STTaskDetailViewController.h"
+#import "STTask.h"
 
 @interface STTaskDetailViewController ()
 - (void)configureView;
@@ -21,19 +22,18 @@
     [self configureView];
 }
 
--(void)setInfo:(NSDictionary *)info{
-    _info=info;
+-(void)setTask:(STTask *)task{
+    _task=task;
     [self configureView];
 }
-
 #pragma mark - Methods
 
 - (void)configureView
 {
-    if (_info) {
-        self.labelTitle.text=_info[@"title"];
-        self.labelDescription.text=_info[@"description"];
-        [self.imageViewPicture setImage:[UIImage imageNamed:_info[@"image"]]];
+    if (_task) {
+        self.labelTitle.text=_task.title;
+        self.labelDescription.text=_task.info;
+        [self.imageViewPicture setImage:[UIImage imageNamed:_task.image]];
     }
 }
 

@@ -63,10 +63,89 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tasks" id="36"/>
+                    <connections>
+                        <segue destination="lbt-cg-zgy" kind="push" identifier="addNewTask" id="qKY-cY-PYd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
+        </scene>
+        <!--New Task View Controller - New Task-->
+        <scene sceneID="ED3-Xw-an5">
+            <objects>
+                <viewController id="lbt-cg-zgy" customClass="STNewTaskViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6c-W1-sjF">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ty-hT-9JW">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Taks Details" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EhT-Cv-kGx">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JB-EI-Y8c">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="add:" destination="lbt-cg-zgy" eventType="touchUpInside" id="377-vo-flg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-VN-qNJ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="ldo-PR-AOB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add Image">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Oy-Wh-QE5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="i7i-EE-xDF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Ty-hT-9JW" firstAttribute="leading" secondItem="c6c-W1-sjF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2g1-AU-UUp"/>
+                            <constraint firstItem="2Oy-Wh-QE5" firstAttribute="top" secondItem="EhT-Cv-kGx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9tO-2X-Jf4"/>
+                            <constraint firstItem="jbk-VN-qNJ" firstAttribute="leading" secondItem="2Oy-Wh-QE5" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="DxZ-GY-6hY"/>
+                            <constraint firstItem="EhT-Cv-kGx" firstAttribute="leading" secondItem="c6c-W1-sjF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="GIX-II-5ux"/>
+                            <constraint firstItem="2Oy-Wh-QE5" firstAttribute="leading" secondItem="c6c-W1-sjF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="M4V-rR-3XD"/>
+                            <constraint firstItem="8JB-EI-Y8c" firstAttribute="top" secondItem="jbk-VN-qNJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Our-ha-kBx"/>
+                            <constraint firstItem="jbk-VN-qNJ" firstAttribute="top" secondItem="EhT-Cv-kGx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RFD-be-FDz"/>
+                            <constraint firstAttribute="trailing" secondItem="8JB-EI-Y8c" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="SNG-y4-l7B"/>
+                            <constraint firstAttribute="trailing" secondItem="EhT-Cv-kGx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ilC-MQ-Rta"/>
+                            <constraint firstItem="EhT-Cv-kGx" firstAttribute="top" secondItem="4Ty-hT-9JW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jnm-Mn-8V6"/>
+                            <constraint firstItem="8JB-EI-Y8c" firstAttribute="leading" secondItem="2Oy-Wh-QE5" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ofM-nc-Boj"/>
+                            <constraint firstItem="4Ty-hT-9JW" firstAttribute="top" secondItem="c6c-W1-sjF" secondAttribute="top" constant="20" symbolic="YES" type="default" id="r8Q-el-DFc"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ty-hT-9JW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sPL-Id-qSt"/>
+                            <constraint firstAttribute="trailing" secondItem="jbk-VN-qNJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="yRT-24-Vcw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Task" id="Hvx-V1-Nzs"/>
+                    <connections>
+                        <outlet property="textFieldDescription" destination="EhT-Cv-kGx" id="4qn-m7-GQC"/>
+                        <outlet property="textFieldTitle" destination="4Ty-hT-9JW" id="YCF-sd-eWM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6i2-YF-ddS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="-576"/>
         </scene>
         <!--Task Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -129,6 +208,14 @@
         </class>
         <class className="STMainViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STMainViewController.h"/>
+        </class>
+        <class className="STNewTaskViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/STNewTaskViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="add:"/>
+                <relationship kind="outlet" name="textFieldDescription" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textFieldTitle" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="STTaskDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STTaskDetailViewController.h"/>
