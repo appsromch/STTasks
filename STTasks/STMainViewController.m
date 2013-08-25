@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Sergey Tyo. All rights reserved.
 //
 
-#import "STMasterViewController.h"
+#import "STMainViewController.h"
 
-#import "STDetailViewController.h"
+#import "STTaskViewController.h"
 
-@interface STMasterViewController () {
+@interface STMainViewController () {
     NSMutableArray *_objects;
 }
 @end
 
-@implementation STMasterViewController
+@implementation STMainViewController
 
 - (void)awakeFromNib
 {

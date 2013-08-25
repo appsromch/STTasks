@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Sergey Tyo. All rights reserved.
 //
 
-#import "STDetailViewController.h"
+#import "STTaskViewController.h"
 
-@interface STDetailViewController ()
+@interface STTaskViewController ()
 - (void)configureView;
 @end
 
-@implementation STDetailViewController
+@implementation STTaskViewController
 
 #pragma mark - Managing the detail item
 

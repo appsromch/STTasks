@@ -17,8 +17,8 @@
 		AFBB57AF17CA5048004D01B1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57AE17CA5048004D01B1 /* Default@2x.png */; };
 		AFBB57B117CA5048004D01B1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57B017CA5048004D01B1 /* Default-568h@2x.png */; };
 		AFBB57B417CA5048004D01B1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57B217CA5048004D01B1 /* MainStoryboard.storyboard */; };
-		AFBB57B717CA5048004D01B1 /* STMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57B617CA5048004D01B1 /* STMasterViewController.m */; };
-		AFBB57BA17CA5048004D01B1 /* STDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57B917CA5048004D01B1 /* STDetailViewController.m */; };
+		AFBB57B717CA5048004D01B1 /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57B617CA5048004D01B1 /* STMainViewController.m */; };
+		AFBB57BA17CA5048004D01B1 /* STTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57B917CA5048004D01B1 /* STTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +36,10 @@
 		AFBB57AE17CA5048004D01B1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AFBB57B017CA5048004D01B1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFBB57B317CA5048004D01B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		AFBB57B517CA5048004D01B1 /* STMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMasterViewController.h; sourceTree = "<group>"; };
-		AFBB57B617CA5048004D01B1 /* STMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMasterViewController.m; sourceTree = "<group>"; };
-		AFBB57B817CA5048004D01B1 /* STDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDetailViewController.h; sourceTree = "<group>"; };
-		AFBB57B917CA5048004D01B1 /* STDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STDetailViewController.m; sourceTree = "<group>"; };
+		AFBB57B517CA5048004D01B1 /* STMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMainViewController.h; sourceTree = "<group>"; };
+		AFBB57B617CA5048004D01B1 /* STMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
+		AFBB57B817CA5048004D01B1 /* STTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTaskViewController.h; sourceTree = "<group>"; };
+		AFBB57B917CA5048004D01B1 /* STTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +89,10 @@
 				AFBB57A917CA5048004D01B1 /* STAppDelegate.h */,
 				AFBB57AA17CA5048004D01B1 /* STAppDelegate.m */,
 				AFBB57B217CA5048004D01B1 /* MainStoryboard.storyboard */,
-				AFBB57B517CA5048004D01B1 /* STMasterViewController.h */,
-				AFBB57B617CA5048004D01B1 /* STMasterViewController.m */,
-				AFBB57B817CA5048004D01B1 /* STDetailViewController.h */,
-				AFBB57B917CA5048004D01B1 /* STDetailViewController.m */,
+				AFBB57B517CA5048004D01B1 /* STMainViewController.h */,
+				AFBB57B617CA5048004D01B1 /* STMainViewController.m */,
+				AFBB57B817CA5048004D01B1 /* STTaskViewController.h */,
+				AFBB57B917CA5048004D01B1 /* STTaskViewController.m */,
 				AFBB57A117CA5048004D01B1 /* Supporting Files */,
 			);
 			path = STTasks;
@@ -181,8 +181,8 @@
 			files = (
 				AFBB57A717CA5048004D01B1 /* main.m in Sources */,
 				AFBB57AB17CA5048004D01B1 /* STAppDelegate.m in Sources */,
-				AFBB57B717CA5048004D01B1 /* STMasterViewController.m in Sources */,
-				AFBB57BA17CA5048004D01B1 /* STDetailViewController.m in Sources */,
+				AFBB57B717CA5048004D01B1 /* STMainViewController.m in Sources */,
+				AFBB57BA17CA5048004D01B1 /* STTaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
