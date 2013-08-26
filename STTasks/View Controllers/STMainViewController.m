@@ -9,8 +9,10 @@
 #import "STMainViewController.h"
 
 #import "STTaskDetailViewController.h"
+#import "STTaskCell.h"
 #import "STCoreDataController.h"
 #import "STTask.h"
+
 
 @interface STMainViewController ()<NSFetchedResultsControllerDelegate> 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
@@ -68,16 +70,17 @@
     return [sectionInfo numberOfObjects];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(STTaskCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     STTask *task = [_fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = task.title;
-    cell.detailTextLabel.text = task.info;
-    cell.imageView.image=[UIImage imageWithContentsOfFile:[[STCoreDataController sharedInstance] imagePath:task.image]];
+    cell.labelTitle.text=task.title;
+    cell.labelInfo.text=task.info;
+    cell.imageViewPicture.image=[UIImage imageWithContentsOfFile:[[STCoreDataController sharedInstance] imagePath:task.image]];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    STTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -136,7 +139,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(STTaskCell*)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:

@@ -28,30 +28,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" detailTextLabel="eNG-3V-dGa" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="lJ0-d7-vTF">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskCell" rowHeight="80" id="lJ0-d7-vTF" customClass="STTaskCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
-                                            <rect key="frame" x="10" y="20" width="38" height="22"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHw-lC-ukx">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="79" id="fwR-GD-r3z"/>
+                                                <constraint firstAttribute="height" constant="79" id="mGI-OA-tfq"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POi-Na-lwl">
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" type="user" id="Iad-bf-KSA"/>
+                                                <constraint firstAttribute="height" constant="30" id="XWH-fV-SdB"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="47" translatesAutoresizingMaskIntoConstraints="NO" id="eNG-3V-dGa">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="213" translatesAutoresizingMaskIntoConstraints="NO" id="UL5-Yv-xUb">
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" type="user" id="A4r-yU-Im2"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UL5-Yv-xUb" secondAttribute="trailing" constant="20" type="default" id="0Z6-W5-7sp"/>
+                                    <constraint firstItem="POi-Na-lwl" firstAttribute="leading" secondItem="bHw-lC-ukx" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="232-WK-971"/>
+                                    <constraint firstItem="UL5-Yv-xUb" firstAttribute="leading" secondItem="bHw-lC-ukx" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4NO-YF-wt9"/>
+                                    <constraint firstItem="bHw-lC-ukx" firstAttribute="leading" secondItem="lJ0-d7-vTF" secondAttribute="leading" type="default" id="SaX-q3-DNZ"/>
+                                    <constraint firstItem="bHw-lC-ukx" firstAttribute="top" secondItem="lJ0-d7-vTF" secondAttribute="top" type="default" id="Tg9-M3-Fcm"/>
+                                    <constraint firstAttribute="trailing" secondItem="POi-Na-lwl" secondAttribute="trailing" constant="20" type="default" id="WAI-JV-JrF"/>
+                                    <constraint firstItem="POi-Na-lwl" firstAttribute="top" secondItem="lJ0-d7-vTF" secondAttribute="top" constant="10" id="ZT1-XL-0zf"/>
+                                    <constraint firstAttribute="bottom" secondItem="UL5-Yv-xUb" secondAttribute="bottom" constant="10" id="txu-tb-Wip"/>
+                                </constraints>
                                 <connections>
+                                    <outlet property="imageViewPicture" destination="bHw-lC-ukx" id="Yon-LH-phI"/>
+                                    <outlet property="labelInfo" destination="UL5-Yv-xUb" id="qWV-69-xzl"/>
+                                    <outlet property="labelTitle" destination="POi-Na-lwl" id="jma-Q4-yTg"/>
                                     <segue destination="21" kind="push" identifier="showDetail" id="jZb-fq-zAk"/>
                                 </connections>
                             </tableViewCell>
@@ -239,6 +262,14 @@
                 <relationship kind="outlet" name="imageViewPicture" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="textFieldDescription" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textFieldTitle" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="STTaskCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/STTaskCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageViewPicture" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="labelInfo" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelTitle" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="STTaskDetailViewController" superclassName="UIViewController">

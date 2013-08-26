@@ -26,6 +26,7 @@
 		AFBB57DF17CA77D5004D01B1 /* STTask.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57DE17CA77D5004D01B1 /* STTask.m */; };
 		AFBB57E217CA8992004D01B1 /* STNewTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB57E117CA8991004D01B1 /* STNewTaskViewController.m */; };
 		AFBB57E417CA97FB004D01B1 /* STTasks.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = AFBB57E317CA97FA004D01B1 /* STTasks.sqlite */; };
+		AFC2FE5E17CB0827000CC20A /* STTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FE5D17CB0827000CC20A /* STTaskCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		AFBB57E017CA8991004D01B1 /* STNewTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewTaskViewController.h; sourceTree = "<group>"; };
 		AFBB57E117CA8991004D01B1 /* STNewTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewTaskViewController.m; sourceTree = "<group>"; };
 		AFBB57E317CA97FA004D01B1 /* STTasks.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = STTasks.sqlite; sourceTree = "<group>"; };
+		AFC2FE5C17CB0827000CC20A /* STTaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTaskCell.h; sourceTree = "<group>"; };
+		AFC2FE5D17CB0827000CC20A /* STTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTaskCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 				AFBB57D417CA70C2004D01B1 /* STTasks.xcdatamodeld */,
 				AFBB57D717CA70E0004D01B1 /* Model */,
 				AFBB57C017CA51AE004D01B1 /* View Controllers */,
+				AFC2FE5917CB036D000CC20A /* Views */,
 				AFBB57CB17CA546D004D01B1 /* Graphic */,
 				AFBB57A117CA5048004D01B1 /* Supporting Files */,
 			);
@@ -164,6 +168,15 @@
 				AFBB57DE17CA77D5004D01B1 /* STTask.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AFC2FE5917CB036D000CC20A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFC2FE5C17CB0827000CC20A /* STTaskCell.h */,
+				AFC2FE5D17CB0827000CC20A /* STTaskCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +256,7 @@
 				AFBB57DA17CA70FB004D01B1 /* STCoreDataController.m in Sources */,
 				AFBB57DF17CA77D5004D01B1 /* STTask.m in Sources */,
 				AFBB57E217CA8992004D01B1 /* STNewTaskViewController.m in Sources */,
+				AFC2FE5E17CB0827000CC20A /* STTaskCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +379,7 @@
 				AFBB57BF17CA5048004D01B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
