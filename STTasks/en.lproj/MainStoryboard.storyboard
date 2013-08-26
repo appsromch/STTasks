@@ -67,8 +67,8 @@
                                     <constraint firstItem="UL5-Yv-xUb" firstAttribute="leading" secondItem="bHw-lC-ukx" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4NO-YF-wt9"/>
                                     <constraint firstItem="bHw-lC-ukx" firstAttribute="leading" secondItem="lJ0-d7-vTF" secondAttribute="leading" type="default" id="SaX-q3-DNZ"/>
                                     <constraint firstItem="bHw-lC-ukx" firstAttribute="top" secondItem="lJ0-d7-vTF" secondAttribute="top" type="default" id="Tg9-M3-Fcm"/>
+                                    <constraint firstItem="POi-Na-lwl" firstAttribute="top" secondItem="lJ0-d7-vTF" secondAttribute="top" constant="10" id="Uy1-KV-LZk"/>
                                     <constraint firstAttribute="trailing" secondItem="POi-Na-lwl" secondAttribute="trailing" constant="20" type="default" id="WAI-JV-JrF"/>
-                                    <constraint firstItem="POi-Na-lwl" firstAttribute="top" secondItem="lJ0-d7-vTF" secondAttribute="top" constant="10" id="ZT1-XL-0zf"/>
                                     <constraint firstAttribute="bottom" secondItem="UL5-Yv-xUb" secondAttribute="bottom" constant="10" id="txu-tb-Wip"/>
                                 </constraints>
                                 <connections>
