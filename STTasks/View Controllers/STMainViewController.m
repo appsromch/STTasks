@@ -9,7 +9,6 @@
 #import "STMainViewController.h"
 
 #import "STTaskDetailViewController.h"
-#import "STTaskCell.h"
 #import "STCoreDataController.h"
 #import "STTask.h"
 
@@ -31,7 +30,6 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBar.tintColor=[UIColor blackColor];
-    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createNewTask)];
@@ -43,6 +41,9 @@
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	}
     
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+        [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    }
 
 }
 
@@ -65,22 +66,21 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id  sectionInfo =
-    [[_fetchedResultsController sections] objectAtIndex:section];
+    id  sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
-- (void)configureCell:(STTaskCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     STTask *task = [_fetchedResultsController objectAtIndexPath:indexPath];
-    cell.labelTitle.text=task.title;
-    cell.labelInfo.text=task.info;
-    cell.imageViewPicture.image=[UIImage imageWithContentsOfFile:[[STCoreDataController sharedInstance] imagePath:task.image]];
+    cell.textLabel.text=task.title;
+    cell.detailTextLabel.text=task.info;
+    cell.imageView.image=[UIImage imageWithContentsOfFile:[[STCoreDataController sharedInstance] imagePath:task.image]];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    STTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -120,7 +120,6 @@
 
 #pragma mark - FetchResultController delegate
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
     [self.tableView beginUpdates];
 }
 
@@ -139,7 +138,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:(STTaskCell*)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
@@ -168,7 +167,6 @@
 
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
     [self.tableView endUpdates];
 }
 
